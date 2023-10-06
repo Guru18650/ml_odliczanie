@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ml_odliczanie.Event"
+             Title="Event">
+    <StackLayout HorizontalOptions="Center">
+        <Label x:Name="name" FontSize="50" HorizontalTextAlignment="Center"/>
+        <Label x:Name="day" HorizontalTextAlignment="Center" FontSize="30"/>
+        <Label x:Name="hour" HorizontalTextAlignment="Center" FontSize="30"/>
+        <Label x:Name="minute" HorizontalTextAlignment="Center" FontSize="30"/>
+        <Label x:Name="second" HorizontalTextAlignment="Center" FontSize="30"/>
+    </StackLayout>
+</ContentPage>

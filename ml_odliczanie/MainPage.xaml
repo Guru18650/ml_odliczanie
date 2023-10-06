@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ml_odliczanie.MainPage">
+
+    <StackLayout Padding="20">
+        <Button Text="Nowy" x:Name="new" Clicked="new_Clicked"></Button>
+        <ListView SelectionMode="None" x:Name="list" Margin="0,10,0,0" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="0.3*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Button Text="{Binding Name}" FontSize="18" BackgroundColor="#ff66cc" CornerRadius="8" Margin="8,8,8,1" Grid.Column="0" Clicked="eventBtn_Clicked"></Button>
+                            <Button Text="Usuń" FontSize="18" BackgroundColor="#ee0000" CornerRadius="8" Margin="0,8,8,1" Grid.Column="1" Clicked="eventBtn_Delete"></Button>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
