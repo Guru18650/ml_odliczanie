@@ -25,5 +25,6 @@ public partial class EventCreator : ContentPage
 		eventClass.DateTime = tempDT;
 
 		event_handler.addEvent(eventClass);
+		Navigation.RemovePage(this);
 	}
 }

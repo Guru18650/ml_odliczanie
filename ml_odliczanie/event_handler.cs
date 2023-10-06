@@ -16,6 +16,11 @@ namespace ml_odliczanie
         static event_handler()
         {
             events = JsonConvert.DeserializeObject<ObservableCollection<eventClass>>(Preferences.Get("events","[]"));
+            foreach (var item in events)
+            {
+                if(item.DateTime < DateTime.Now)
+                    removeEvent(item); 
+            }
         }
         public static void addEvent(eventClass e)
         {
